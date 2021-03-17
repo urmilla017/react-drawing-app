@@ -2,9 +2,9 @@
 
 ### Local Development
 
-# Initial setup
+### Initial setup
 npm install
 
-# Start the server
+### Start the server
 npm start
 ```
