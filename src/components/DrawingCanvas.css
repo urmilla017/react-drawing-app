@@ -1,0 +1,9 @@
+.canvasContainer {
+    margin: 2%;
+}
+
+.sidebarContainer {
+    width: 20%;
+    margin: 0 !important;
+    text-align: center !important;
+}
