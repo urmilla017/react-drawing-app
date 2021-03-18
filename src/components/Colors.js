@@ -3,7 +3,6 @@ import React from 'react';
 const Colors = (props) => {
     const onChangeColor = (color) => {
         props.onColorSubmit(color)
-        return color;
     };
 
     const renderedButtons = props.colorOptions.map((colorOption) => {
