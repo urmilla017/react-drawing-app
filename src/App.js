@@ -82,9 +82,14 @@ const buttonOptions = [
         icon: 'save'
     },
     {
-        label: 'RESET',
+        label: 'CLEAR',
         name: 'reset',
         icon: 'file'
+    },
+    {
+        label: 'FILL',
+        name: 'fill',
+        icon: 'tint'
     }
 ];
 

@@ -1,3 +1,15 @@
 .iconStyle {
-    padding-left: 20% !important;
+    padding-left: 15% !important;
+}
+
+.divButtonStyle {
+    display: inline-block !important;
+    width: 55px !important;
+    height: 40px !important;
+}
+
+.buttonSettingStyle {
+    padding: 4% !important;
+    height: 90% !important;
+    width: 90% !important;
 }

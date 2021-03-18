@@ -4,6 +4,8 @@ import Colors from './Colors';
 import Buttons from './Buttons';
 
 const DrawingCanvas = ({ width, height, colorOptions, buttonOptions }) => {
+    const canvasWidth = window.innerWidth * 0.50;
+    const canvasHeight = window.innerHeight * 0.80;
     const canvasRef = useRef(null);
     const [isPainting, setIsPainting] = useState(false);
     const [mouseCoordinates, setMouseCoordinates] = useState(null);
@@ -30,6 +32,12 @@ const DrawingCanvas = ({ width, height, colorOptions, buttonOptions }) => {
             aTag.download = "painting.png";
             aTag.click();
             document.body.removeChild(aTag);
+        }
+        if(buttonName === 'fill') {
+            const canvas = canvasRef.current;
+            const context = canvas.getContext('2d');
+            context.fillStyle = paintColor;
+            context.fillRect(0, 0, canvasWidth, canvasHeight);
         }
     };
 
@@ -104,17 +112,20 @@ const DrawingCanvas = ({ width, height, colorOptions, buttonOptions }) => {
     return (
         <div className="canvasContainer">
             <div className="ui floated right segment">
-                <canvas className="canvasStyle" ref={canvasRef} height={window.innerHeight * 0.80} width={window.innerWidth * 0.70} />
+                <canvas className="canvasStyle" ref={canvasRef} height={canvasHeight} width={canvasWidth} />
             </div>
 
             <div className="ui floated left segment sidebarContainer">
 
-                    <h1 className="ui icon header iconContainer">
-                        <i className="settings icon center"></i>
+                    <h1 className="ui icon header">
+                        <i className="settings icon center large"></i>
                     </h1>
 
-                    <div className="ui segment">
-                        <h1>REACT DRAW</h1>
+                        <h3>REACT DRAW</h3>
+
+                    <div className="ui tag label">
+                        <button className={`ui ${paintColor} button chosenButtonStyle`}></button>
+                        <div className="spanStyle">Brush Color</div>
                     </div>
 
                     <div className="ui segment">

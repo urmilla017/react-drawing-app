@@ -8,15 +8,13 @@ const Buttons = (props) => {
 
     const renderedButtons = props.buttonOptions.map((buttonOption) => {
         return (
-            <div key={buttonOption.name}>
+            <div key={buttonOption.name} className="divButtonStyle">
                 <a onClick={(e) => onButtonClick(e, buttonOption.name)}>
-                    <button className="ui button"> 
+                    <button className="ui button buttonSettingStyle"> 
                         {buttonOption.label}
                         <i className={`icon ${buttonOption.icon} iconStyle`}></i>
                     </button>
                 </a>
-                <br />
-                <br />
             </div>
         )
     })
