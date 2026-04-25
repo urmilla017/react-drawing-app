@@ -1,5 +1,8 @@
 # React Drawing App
 
+<img width="1321" height="703" alt="react-drawing-app" src="https://github.com/user-attachments/assets/8ce020ee-fd52-4cc7-9b44-13b9b13c5397" />
+
+## To run the app
 ```npm run dev```
 
 <!-- This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
