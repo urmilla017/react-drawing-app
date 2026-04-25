@@ -1,0 +1,6 @@
+.canvas {
+  display: block;
+  cursor: crosshair;
+  width: auto;
+  height: auto;
+}
