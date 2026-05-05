@@ -190,7 +190,7 @@ export default function App() {
               min={1}
               max={50}
               step={1}
-              onChange={(event, value) => setBrushSize(value as number)}
+              onChange={(_, value) => setBrushSize(value as number)}
               sx={{
                 color: 'primary.main',
                 height: 8,
